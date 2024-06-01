@@ -31,13 +31,13 @@ export class Card {
           font-family: 'Segoe UI', Ubuntu, "Helvetica Neue", Sans-Serif
         }`
         );
-        const strokeWidth = 1;
+        const strokeWidth = 3;
         this.svg
             .append('rect')
             .attr('x', 1)
             .attr('y', 1)
-            .attr('rx', 5)
-            .attr('ry', 5)
+            .attr('rx', 10)
+            .attr('ry', 10)
             // 100% - 2px to show borderline
             .attr('height', `${((height - 2 * strokeWidth) / height) * 100}%`)
             // 100% - 2px to show borderline

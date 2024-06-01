@@ -30,6 +30,7 @@ export class Theme {
 // Set up themes
 // We support short hex color, hex color and RGBA hex
 // ThemeMap.set(name, new Theme('title', 'text', 'background', 'stroke', 'strokeOpacity', 'icon', 'chart'));
+/*
 ThemeMap.set('2077', new Theme('#ff0055', '#03d8f3', '#141321', '#141321', 1, '#fcee0c', '#00ffc8'));
 ThemeMap.set('algolia', new Theme('#00aeff', '#ffffff', '#050f2c', '#000000', 0, '#2dde98', '#00aeff'));
 ThemeMap.set('apprentice', new Theme('#ffffff', '#bcbcbc', '#262626', '#000000', 0, '#ffffaf', '#ffffff'));
@@ -94,3 +95,6 @@ ThemeMap.set('vision_friendly_dark', new Theme('#ffb000', '#ffffff', '#000000', 
 ThemeMap.set('vue', new Theme('#41b883', '#000000', '#ffffff', '#e4e2e2', 1, '#41b883', '#41b883'));
 ThemeMap.set('yeblu', new Theme('#ffff00', '#ffffff', '#002046', '#000000', 0, '#ffff00', '#ffff00'));
 ThemeMap.set('zenburn', new Theme('#f0dfaf', '#dcdccc', '#3f3f3f', '#3f3f3f', 1, '#8cd0d3', '#7f9f7f'));
+*/
+// ThemeMap.set(name, new Theme('title', 'text', 'background', 'stroke', 'strokeOpacity', 'icon', 'chart'));
+ThemeMap.set('everyonelovesyou', new Theme('#ffb2b8', '#ece0df', '#201a1a', '#9f8c8d', 1, '#ffdadb', '#ffdadb'));

@@ -130,16 +130,20 @@ export function createDetailCard(
 
     chartPanel
         .append('g')
-        .attr('color', theme.text)
+        .attr('color', theme.title)
         .attr('transform', `translate(${-chartRightMargin},${chartHeight})`)
-        .call(xAxis);
+        .call(xAxis)
+        .selectAll('text')
+        .attr('fill', theme.text);
 
     // Add the Y Axis
     chartPanel
         .append('g')
-        .attr('color', theme.text)
+        .attr('color', theme.title)
         .attr('transform', `translate(${chartWidth - chartRightMargin},0)`)
-        .call(d3.axisRight(y).ticks(8));
+        .call(d3.axisRight(y).ticks(8))
+        .selectAll('text')
+        .attr('fill', theme.text);
 
     // hard code this coordinate becuz I'm too lazy
     chartPanel

@@ -40,26 +40,30 @@ export function createProductiveCard(chartData: number[], theme: Theme, utcOffse
     const xAxis = bottomAxis.tickValues([0, 6, 12, 18, 23]);
 
     // Add the X Axis
-    const g = chartPanel.append('g').attr('color', theme.text).attr('transform', `translate(0,${chartHeight})`);
-    g.call(xAxis);
+    const g = chartPanel.append('g').attr('color', theme.title).attr('transform', `translate(0,${chartHeight})`);
+    g.call(xAxis).selectAll('text').attr('fill', theme.text);
 
     // custom x axis, here is svg magic
     // Add more space for first bar
-    g.select('.domain').attr(
-        'd',
-        `M${0 - bottomScaleBand(1)! + bottomScaleBand(0)! + bottomScaleBand.bandwidth()},0.5H${chartWidth}.5`
-    );
+    g.select('.domain')
+        .attr(
+            'd',
+            `M${0 - bottomScaleBand(1)! + bottomScaleBand(0)! + bottomScaleBand.bandwidth()},0.5H${chartWidth}.5`
+        )
+        .attr('fill', theme.title);
 
     // Add the Y Axis
     chartPanel
         .append('g')
-        .attr('color', theme.text)
+        .attr('color', theme.title)
         // Add gap before first bar
         .attr(
             'transform',
             `translate(${0 - bottomScaleBand(1)! + bottomScaleBand(0)! + bottomScaleBand.bandwidth()},0)`
         )
-        .call(d3.axisLeft(y).ticks(5));
+        .call(d3.axisLeft(y).ticks(5))
+        .selectAll('text')
+        .attr('fill', theme.text);
 
     chartPanel
         .selectAll('.bar')
